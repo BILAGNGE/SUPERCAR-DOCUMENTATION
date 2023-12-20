@@ -25,7 +25,7 @@ DELIMITER $$
 --
 -- Procedures
 --
-CREATE DEFINER=`338019`@`%` PROCEDURE `GetClientsByCarBrand` (IN `carBrand` VARCHAR(50))   BEGIN
+CREATE PROCEDURE `GetClientsByCarBrand` (IN `carBrand` VARCHAR(50))   BEGIN
     SELECT c.*
 FROM client c
 INNER JOIN demande_essai de ON c.id = de.id_client
